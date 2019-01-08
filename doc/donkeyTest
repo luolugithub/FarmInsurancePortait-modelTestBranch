@@ -1,0 +1,124 @@
+**********************************************************************
+20181112AM
+驴的图片版测试结果
+
+模型
+   
+   boxDetector = "donkey_detection_ssdlite_mobilenet_v2_focal_192_uint8_1019.tflite";
+   classifier  = DONKEY_ROTATION_AND_KEYPOINT
+	       = "donkey_rotation_and_keypoint1017.tflite";
+	      
+过滤结果
+
+SrcImage: 200;
+
+box过滤后：86；
+
+clip image：79；
+
+rotation_and_keypoint
+			C1: 9;
+			C2: 21;
+			C3: 12;
+			C10: 37;
+**********************************************************************
+20181112PM
+驴的图片版测试结果
+
+模型
+   
+   boxDetector = "donkey_detection_ssdlite_mobilenet_v2_focal_192_uint8_1019.tflite";
+   classifier  = DONKEY_ROTATION_AND_KEYPOINT
+	       = "donkey_rotation_and_keypoint1017.tflite";
+	      
+过滤结果
+
+SrcImage: 179;
+
+box过滤后：158；
+
+clip image：124；
+
+rotation_and_keypoint
+			C1: 9;
+			C2: 42;
+			C3: 11;
+			C10: 62;
+**********************************************************************
+20181113PM
+驴的图片版测试结果
+
+模型
+   
+   boxDetector = "donkey_detection_ssdlite_mobilenet_v2_focal_192_uint8_1019.tflite";
+   classifier  = DONKEY_ROTATION_AND_KEYPOINT
+	       = "donkey_rotation_and_keypoint1017.tflite";
+	      
+过滤结果
+
+SrcImage: 179;
+
+box过滤后：158；
+
+clip image：72；
+
+rotation_and_keypoint
+携带检测框分类结果
+			C1: 5;
+			C2: 16;
+			C3: 11;
+			C10: 40;	
+去掉检测框分类结果		
+			C1: 9;
+			C2: 17;
+			C3: 11;
+			C10: 35;
+**********************************************************************
+20181113PM
+驴的图片版测试结果
+
+模型
+   
+   boxDetector = "donkey_detection_ssdlite_mobilenet_v2_focal_192_uint8_1019.tflite";
+   classifier  = DONKEY_ROTATION_AND_KEYPOINT
+	       = "donkey_rotation_and_keypoint1017.tflite";
+	      
+过滤结果
+
+SrcImage: 179;
+
+box过滤后：158；
+
+crop image：156；
+
+rotation_and_keypoint
+			C1: 20;
+			C2: 49;
+			C3: 11;
+			C10: 76;	
+**********************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

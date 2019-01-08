@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/fragment_toubao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/toubao_title"
+            layout="@layout/activity_title" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/local_insured_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btn_toubao_add"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/toubao_title"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_onclick"
+            android:gravity="center"
+            android:text="创建新验标单"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_tag_input_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/btn_toubao_add"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="14"
+                android:background="@drawable/shape_tag_search"
+                android:drawableLeft="@mipmap/ic_search"
+                android:drawablePadding="3dp"
+                android:hint="请输入验标号/被保险人/身份证号"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/keywordSearchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/button_onclick"
+                android:text="查询"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:background="#F0F0F0"
+            android:text="已有验标单列表，如需离线操作请点五星"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

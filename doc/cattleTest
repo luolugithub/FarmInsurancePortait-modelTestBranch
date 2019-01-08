@@ -1,0 +1,119 @@
+**********************************************************************
+20181115PM
+cattle的图片版测试结果
+
+模型
+   boxDetector = "cow_detect_1029_tf10.tflite";
+   keypoint classifier  = "cow_keypoint_1029_tf10.tflite"
+   rotation classifier  = "cow_rotation_1030_tf10.tflite";
+	      
+过滤结果
+
+SrcImage: 8311;
+detected：4555；
+crop image：4361；
+
+cowKeypointsP1: 348
+cowKeypointsP2: 90
+cowKeypointsP3: 727
+cowKeypointsP10: 3196
+
+cowRotP1: 1076
+cowRotP2: 942
+cowRotP3: 1229
+cowRotP10: 1114
+
+
+rotation_and_keypoint
+			C1: 260;
+			C2: 75;
+			C3: 550;
+		
+**********************************************************************
+20181119PM
+cattle 8311 TestResult
+
+model
+   boxDetector = "cow_detect_1029_tf10.tflite";
+   keypoint classifier  = "cow_keypoint_1029_tf10.tflite"
+   rotation classifier  = "cow_rotation_1030_tf10.tflite";
+	      
+result
+
+SrcImage: 8311;
+detected：4129；
+crop image：4129；
+
+cowKeypointsP1: 1150
+cowKeypointsP2: 1026
+cowKeypointsP3: 1252
+cowKeypointsP10: 701
+
+cowRotP1: 1335
+cowRotP2: 828
+cowRotP3: 1247
+cowRotP10: 719
+
+
+rotation_and_keypoint
+			C1: 1001;
+			C2: 662;
+			C3: 1055;
+**********************************************************************
+20181124AM
+2017 Val images [5K/1GB] TestResult
+
+model
+   boxDetector = "cow_detect_1029_tf10.tflite";
+   keypoint classifier  = "cow_keypoint_1029_tf10.tflite"
+   rotation classifier  = "cow_rotation_1030_tf10.tflite";
+	      
+result
+
+SrcImage: 5000;
+detected：95；
+crop image：91；
+
+cowKeypointsP1: 14
+cowKeypointsP2: 30
+cowKeypointsP3: 12
+cowKeypointsP10: 35
+
+cowRotP1: 4
+cowRotP2: 36
+cowRotP3: 18
+cowRotP10: 33
+
+
+rotation_and_keypoint
+			C1: 2;
+			C2: 18;
+			C3: 7;
+**********************************************************************
+
+**********************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

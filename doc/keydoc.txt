@@ -1,0 +1,71 @@
+password: pig123456
+alias: pig_detect
+
+keytool -list -v -keystore doc/pig.jks
+
+Keystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: pig_detect
+Creation date: Nov 30, 2017
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=innovation, OU=innovation, O=innovation, L=Beijing, ST=Beijing, C=86
+Issuer: CN=innovation, OU=innovation, O=innovation, L=Beijing, ST=Beijing, C=86
+Serial number: 469e8773
+Valid from: Thu Nov 30 21:38:28 CST 2017 until: Mon Nov 24 21:38:28 CST 2042
+Certificate fingerprints:
+	 MD5:  FE:3F:A1:9D:05:FA:15:6B:70:FB:27:4A:9A:B8:F0:31
+	 SHA1: 97:B4:1C:08:90:99:8D:B5:13:0F:0F:DE:5A:01:60:40:ED:5E:56:CF
+	 SHA256: 9B:6A:C4:4B:3A:D6:83:CB:57:6F:C9:FA:B7:6B:D0:3F:34:29:75:E3:1C:64:5C:6A:2A:9C:98:1A:50:11:BE:51
+	 Signature algorithm name: SHA256withRSA
+	 Version: 3
+//luolu
+cowFace key store
+
+1,	password: cowface
+2,	Alias:	keyCowFace
+3,	first and last name: cowface
+4,	oganizational unit: innovationai
+5,	oganization: innovationai
+6,	country code: 102600
+7,	city: beijing
+8,	locate:beijing
+密钥库类型: JKS
+密钥库提供方: SUN
+
+您的密钥库包含 1 个条目
+
+别名: my_key_alias
+创建日期: 2018-6-9
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=luo, OU=innovationai, O=innovationai, L=beijing, ST=beijing, C=CN
+发布者: CN=luo, OU=innovationai, O=innovationai, L=beijing, ST=beijing, C=CN
+序列号: 608663b2
+有效期为 Sat Jun 09 17:29:22 CST 2018 至 Wed Oct 25 17:29:22 CST 2045
+证书指纹:
+         MD5:  79:57:09:76:6F:23:5E:0C:FB:7F:F9:B1:7B:2F:9E:26
+         SHA1: 18:22:F1:75:12:FE:9A:68:05:72:BF:33:33:BE:1A:C9:AB:45:D3:67
+         SHA256: 48:FD:8C:D1:38:5B:78:3C:7D:3C:3C:7D:78:E6:BB:9F:98:B4:5B:A4:47:15:A3:F2:47:6F:89:2F:D6:72:54:76
+签名算法名称: SHA256withRSA
+主体公共密钥算法: 2048 位 RSA 密钥
+版本: 3
+
+扩展:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 98 95 60 4F B7 8D ED FB   C8 2F DB 9C 98 26 37 D9  ..`O...../...&7.
+0010: 85 C1 02 E0                                        ....
+]
+]
+
+
+
+*******************************************

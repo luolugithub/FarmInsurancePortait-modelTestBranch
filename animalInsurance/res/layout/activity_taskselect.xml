@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <!--<scut.carson_ho.searchview.SearchView-->
+    <!--android:id="@+id/search_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="top"-->
+    <!--app:textSizeSearch="5dp"-->
+    <!--app:textColorSearch="#3F51B5"-->
+    <!--app:textHintSearch="保单号查询"-->
+    <!--app:searchBlockHeight="150"-->
+    <!--app:searchBlockColor="#28efef"-->
+    <!--/>-->
+
+
+
+    <com.innovation.view.CustomViewPager
+        android:id="@+id/myviewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+    </com.innovation.view.CustomViewPager>
+
+    <!--&lt;!&ndash; 指示标签 &ndash;&gt;-->
+    <LinearLayout
+    android:id="@+id/cursorarea"
+    android:layout_width="fill_parent"
+    android:background="#DCDCDC"
+    android:orientation="horizontal"
+    android:layout_height="2dp">
+    <ImageView
+    android:id="@+id/cursor_btn"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    </ImageView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomlinear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_blue_dark">
+        <RadioGroup
+            android:id="@+id/rg_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            >
+
+
+            <RadioButton
+                android:id="@+id/btn_first"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:button="@null"
+                android:gravity="center"
+                android:text="投保"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/btn_second"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="理赔"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+    </RelativeLayout>>
+
+
+</LinearLayout>

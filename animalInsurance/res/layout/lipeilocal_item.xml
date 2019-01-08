@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_lipei"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+
+        <TextView
+            android:id="@+id/lipei_num"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="1234567890"
+            android:textColor="#333" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/deletelocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/lipei_num"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:text="删除本地理赔单"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/deletelocal"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/lipei_name"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/lipei_num"
+            android:text="北京市xx公司"
+            android:textColor="#333" />
+
+        <TextView
+            android:id="@+id/uploadtext"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/lipei_name"
+            android:text="已录入" />
+
+        <TextView
+            android:id="@+id/lipei_idcard"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lipei_name"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/lipei_num"
+            android:text="23108412345"
+            android:textColor="#333" />
+
+        <TextView
+            android:id="@+id/isnot_lipei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lipei_name"
+            android:layout_toEndOf="@+id/lipei_num"
+            android:text="已录入"
+            android:textColor="#333"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lipei_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lipei_idcard"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/lipei_num"
+            android:text="2018-06-14"
+            android:textColor="#999" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/lipei_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_onclick"
+                android:text="上传"
+                android:textColor="#fff"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/toubao_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toubao_name"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_onclick"
+                android:text="继续录入"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/toubao_continue_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toubao_name"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_onclick"
+                android:text="继续录入"
+                android:textColor="#fff"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="#ccc" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.innovation.biz.insurance.YanBiaoDanActivity">
+
+    <include
+        android:id="@+id/toubao_title"
+        layout="@layout/activity_title" />
+
+    <Button
+        android:id="@+id/btn_yanbiao_add"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/toubao_title"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_onclick"
+        android:gravity="center"
+        android:text="新建保单"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="5dp"
+        android:background="#F0F0F0"
+        android:gravity="center"
+        android:text="已有保单列表"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/yanbiaodan_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"></ListView>
+
+
+</LinearLayout>

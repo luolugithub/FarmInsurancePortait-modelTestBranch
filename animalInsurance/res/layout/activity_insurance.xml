@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="保单名称:" />
+
+                <EditText
+                    android:id="@+id/baodanName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:hint="请输入保单名称"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:layout_width="wrap_content"
+                    android:text="类型" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupBaodanType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonEnterprise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="企业" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonOrganization"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="组织" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:text="投保险种" />
+
+                <Spinner
+                    android:id="@+id/spinnerInsuranceType"
+                    style="@style/Base.Animation.AppCompat.DropDownUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="3"></Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="保险费率:" />
+
+                <EditText
+                    android:id="@+id/insuranceRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="%"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:layout_width="wrap_content"
+                    android:text="饲养方式" />
+
+                <RadioGroup
+                    android:id="@+id/farmFormRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/scaleFarming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="规模化养殖" />
+
+                    <RadioButton
+                        android:id="@+id/freeRangeFarming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="散养" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="单位保险金额" />
+
+                <EditText
+                    android:id="@+id/unitInsuranceCost"
+                    style="@style/form_style.edit"
+                    android:hint="请输入单位保险金额"
+                    android:inputType="number" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="地址:" />
+
+                <EditText
+                    android:id="@+id/baodanApplyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:inputType="text"
+                    android:hint="请输入地址"
+                    android:text="未知地址"
+                    android:maxLength="50"
+                    android:maxLines="2"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_yan"
+                style="@style/form_style.layout"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="验标名称:" />
+
+                <EditText
+                    android:id="@+id/baodanApplyName"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入验标名称"
+                    android:maxLength="50"
+                    android:maxLines="2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/new_yan"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/begin_btn_bg"
+                    android:gravity="center"
+                    android:text="新建验标单" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:background="#ccc" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:background="#ccc" />
+
+            <Button
+                android:id="@+id/btnFinish"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/button_onclick"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="#fff"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnNext"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/button_onclick"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="#fff"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

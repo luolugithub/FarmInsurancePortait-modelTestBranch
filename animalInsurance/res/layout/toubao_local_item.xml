@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/text"-->
+    <!--/>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_toubao"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+       <!-- <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/deleteInsured"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_onclick"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/toubao_date"
+            android:text="删除本地验标单" />-->
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/deleteInsured"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/toubao_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginLeft="15dp"
+            android:text="删除本地验标单" />
+        <View
+            android:layout_below="@+id/deleteInsured"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_width="100dp"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/toubao_num"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="1234567890"
+            android:textColor="#333" />
+
+        <TextView
+            android:id="@+id/toubao_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/toubao_num"
+            android:text="北京市xx公司"
+            android:textColor="#333" />
+
+        <TextView
+            android:id="@+id/toubao_idcard"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toubao_name"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/toubao_num"
+            android:text="23108412345"
+            android:textColor="#333" />
+
+        <TextView
+            android:id="@+id/isnot_lipei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toubao_name"
+            android:layout_toEndOf="@+id/toubao_num"
+            android:text="已理赔"
+            android:textColor="#333"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/toubao_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toubao_idcard"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/toubao_num"
+            android:text="2018-06-14"
+            android:textColor="#999" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/toubao_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_onclick"
+                android:text="上传"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/toubao_local_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toubao_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/toubao_upload"
+                android:background="@drawable/button_onclick"
+                android:text="继续录入"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="#ccc" />
+
+        <TextView
+            android:id="@+id/cow_to_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="0头信息未上传" />
+    </RelativeLayout>
+</RelativeLayout>

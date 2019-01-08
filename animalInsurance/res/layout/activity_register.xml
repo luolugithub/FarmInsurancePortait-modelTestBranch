@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/nestedScrollView"
+    android:padding="15dp"
+    tools:context="com.innovation.login.RegisterActivity">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="300dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-10dp"
+            android:src="@drawable/ic_logo" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@android:color/holo_blue_dark">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="用户名"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_blue_dark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutIDNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@android:color/holo_blue_dark">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditIDNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="身份证号"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_blue_dark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputInviteName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/holo_blue_dark">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInputEditInviteCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入邀请码"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textColorHint="@android:color/holo_blue_dark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_verify"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_bt_bg"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:text="验证" />
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@android:color/holo_blue_dark">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="所属公司"
+                android:inputType="text"
+                android:maxEms="15"
+                android:scrollbars="vertical"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_blue_dark" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutCompanyCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@android:color/holo_blue_dark"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/company_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="所属公司代码"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_blue_dark" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@android:color/holo_blue_dark"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_blue_dark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@android:color/holo_blue_dark"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="确认密码"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_blue_dark" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/get_phonenum_checkcode_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--<AutoCompleteTextView-->
+                <!--android:id="@+id/phone1"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawablePadding="2dp"-->
+                <!--android:hint="手机号"-->
+                <!--android:inputType="phone"-->
+                <!--android:textColorHint="@android:color/holo_blue_dark"-->
+                <!--android:maxLength="11"-->
+                <!--android:maxLines="1" />-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayoutPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@android:color/holo_blue_dark">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/textInputEditPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="手机号"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textColorHint="@android:color/holo_blue_dark" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/get_checkcode_btn1"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/ic_bt_bg"
+                    android:text="获取验证码"
+                    android:textColor="#fff"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <!--<EditText-->
+            <!--android:id="@+id/getSMScodeCheck"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--style="@style/EditText"-->
+            <!--android:textColorHint="@android:color/holo_blue_dark"-->
+            <!--android:hint="@string/prompt_code"-->
+            <!--android:imeActionId="@+id/login"-->
+            <!--android:imeActionLabel="@string/action_sign_in_short"-->
+            <!--android:imeOptions="actionUnspecified"-->
+            <!--android:textSize="16sp"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true"-->
+            <!--tools:ignore="InvalidImeActionId" />-->
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutSMScode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@android:color/holo_blue_dark"
+                app:passwordToggleEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInputSMScode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="验证码"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textColorHint="@android:color/holo_blue_dark" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButtonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="注册"
+            android:textColor="#f0f0f0" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewLinkLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="已有账号，去登录"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp" />
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v4.widget.NestedScrollView>

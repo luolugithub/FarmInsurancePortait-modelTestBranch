@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="被保险人:" />
+
+                <EditText
+                    android:id="@+id/editTextBaodanedPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:hint="请输入被保险人名称"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="证件类型" />
+
+                <RadioGroup
+                    android:id="@+id/certificateType_RadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/radioButtonIDCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="身份证号" />
+
+                    <RadioButton
+                        android:id="@+id/radioBttonBusinessLicens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="营业执照号" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="被保险人证件号:" />
+
+                <EditText
+                    android:id="@+id/editTextBaodanIDCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="身份证号或营业执照号"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/form_style.layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageIDCardZhengUpload"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@mipmap/add_photo"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textViewIDPositive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="23dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/idPostive"
+                            android:textColor="?android:attr/textColorLinkInverse"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageIDCardZhengUpload"
+                            app:layout_constraintEnd_toEndOf="@+id/imageIDCardZhengUpload" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textViewIDCardZhengPath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/form_style.layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/id_card_negative_photo_constraint_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageIDCardFanUpload"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@mipmap/add_photo"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/textViewIdCardNegative"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="身份证反面照片"
+                            android:textColor="?android:attr/textColorLinkInverse"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageIDCardFanUpload"
+                            app:layout_constraintEnd_toEndOf="@+id/imageIDCardFanUpload" />
+                        tools:layout_editor_absoluteY="83dp" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/idCardFanPath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="开户行:" />
+
+                <EditText
+                    android:id="@+id/openBankCardName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:hint="请输入开户行"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="银行账号:" />
+
+                <EditText
+                    android:id="@+id/bankCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:hint="请输入银行账号"
+                    android:inputType="number"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_style.layout"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="@string/bankCard" />
+
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/bankCard"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@mipmap/add_photo"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/bankCard"
+                        android:textColor="?android:attr/textColorLinkInverse"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/bankCard"
+                        app:layout_constraintEnd_toEndOf="@+id/bankCard" />
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/bank_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="联系方式:" />
+
+                <EditText
+                    android:id="@+id/phoneNumber"
+                    style="@style/form_style.edit"
+                    android:hint="请输入手机号"
+                    android:inputType="number" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:background="#ccc"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btncaiji"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_background"
+                        android:gravity="center"
+                        android:text="图像采集"
+                        android:visibility="gone"
+                        android:textColor="#fff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btnFinish"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_onclick"
+                        android:gravity="center"
+                        android:text="完成"
+                        android:textColor="#fff" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

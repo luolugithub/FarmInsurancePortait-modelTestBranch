@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="5dp"
+    android:background="@drawable/info_dialog_bg">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:text="自定义名称"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@android:color/white"
+
+        >
+
+        <!--<ImageView-->
+        <!--android:id="@id/image1"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_weight="1.0"-->
+        <!--android:layout_marginLeft="10.0dip"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:paddingTop="10.0dip"-->
+        <!--android:src="@drawable/angle01" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@id/image6"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_weight="1.0"-->
+        <!--android:layout_marginLeft="10.0dip"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:paddingTop="10.0dip"-->
+        <!--android:src="@drawable/angle06" />-->
+
+        <EditText
+            android:id="@+id/nameVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="自定义压缩包名称"
+            android:minLines="1"
+            android:maxLines="2"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/negativeAngle16Info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp"
+            android:visibility="gone"
+            tools:ignore="Suspicious0dp" />
+
+        <Button
+            android:id="@+id/positiveAngle16Info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:text="确定"
+            android:gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp"
+            tools:ignore="Suspicious0dp" />
+    </LinearLayout>
+</LinearLayout>

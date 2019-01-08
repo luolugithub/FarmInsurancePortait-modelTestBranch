@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_bg"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/content_view_image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@mipmap/cowface"
+
+        />
+
+    <TextView
+        android:id="@+id/download_notice_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/content_view_image"
+        android:text="已下载"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/download_notice_speed_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/download_notice_name_tv"
+        android:text="0%"
+        android:textColor="@color/black"
+        />
+
+    <ProgressBar
+        android:id="@+id/app_upgrade_progressbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_view_image"
+        android:layout_marginTop="4dp"
+        android:progressDrawable="@drawable/progress_drawable"
+        android:max="100"
+        />
+
+</RelativeLayout>

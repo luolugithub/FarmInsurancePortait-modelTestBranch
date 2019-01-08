@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/form_style.layout"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="26dp"
+                    android:text="参保数量:"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tv_baodan_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:hint="请输入参保数量"
+                    android:inputType="number"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_style.layout"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="26dp"
+                    android:text="参保金额:"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tv_baodan_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/tv_transparent_helper"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入参保金额"
+                    android:inputType="numberDecimal"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="被保险人:" />
+
+                <EditText
+                    android:id="@+id/tv_baodan_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:hint="请输入被保险人名称"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <RadioGroup
+                android:id="@+id/certificate_type_radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/id_card_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号" />
+
+                <RadioButton
+                    android:id="@+id/id_business_licens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="营业执照号" />
+            </RadioGroup>
+
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="被保险人证件号:" />
+
+                <EditText
+                    android:id="@+id/tv_baodan_idcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="身份证号或营业执照号"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/form_style.layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/btn_idcard_zheng_upload"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="160dp"-->
+                    <!--android:layout_margin="4dp"-->
+                    <!--android:layout_marginTop="0dp"-->
+                    <!--android:src="@mipmap/add_photo" />-->
+                    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/btn_idcard_zheng_upload"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/add_photo"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_id_positive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/idPostive"
+                            android:textColor="?android:attr/textColorLinkInverse"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/btn_idcard_zheng_upload"
+                            app:layout_constraintEnd_toEndOf="@+id/btn_idcard_zheng_upload"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="@+id/btn_idcard_zheng_upload"
+                            app:layout_constraintTop_toTopOf="@+id/btn_idcard_zheng_upload"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/idcard_zheng_path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/form_style.layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/id_card_negative_photo_constraint_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/btn_idcard_fan_upload"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/add_photo"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_id_negative"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="身份证反面照片"
+                            android:textColor="?android:attr/textColorLinkInverse"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/btn_idcard_fan_upload"
+                            app:layout_constraintEnd_toEndOf="@+id/btn_idcard_fan_upload"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="@+id/btn_idcard_fan_upload"
+                            app:layout_constraintTop_toTopOf="@+id/btn_idcard_fan_upload"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/idcard_fan_path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="开户行:" />
+
+                <EditText
+                    android:id="@+id/tv_baodan_openbank"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:hint="请输入开户行"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="银行账号:" />
+
+                <EditText
+                    android:id="@+id/tv_baodan_bank_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:hint="请输入银行账号"
+                    android:inputType="number"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_style.layout"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="@string/bankCard" />
+
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/btn_bank_upload"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/add_photo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/bankCard"
+                        android:textColor="?android:attr/textColorLinkInverse"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/btn_bank_upload"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_bank_upload"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/btn_bank_upload"
+                        app:layout_constraintTop_toTopOf="@+id/btn_bank_upload"
+                        app:layout_constraintVertical_bias="1.0" />
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/bank_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="联系方式:" />
+
+                <EditText
+                    android:id="@+id/tv_baodan_tel"
+                    style="@style/form_style.edit"
+                    android:hint="请输入手机号"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="保险费率:" />
+
+                <EditText
+                    android:id="@+id/rate"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:text="%" />
+            </LinearLayout>
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+            <!--养殖方式-->
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:layout_marginRight="0dp"
+                    android:text="投保险种" />
+
+                <Spinner
+                    android:id="@+id/spinnerInsureType"
+                    style="@style/Base.Animation.AppCompat.DropDownUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"></Spinner>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:layout_width="wrap_content"
+                    android:text="饲养方式" />
+
+                <RadioGroup
+                    android:id="@+id/shiyangMethodRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/scale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="规模化养殖" />
+
+                    <RadioButton
+                        android:id="@+id/free_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="散养" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="单位保险金额" />
+
+                <EditText
+                    android:id="@+id/editTextToubaoCost"
+                    style="@style/form_style.edit"
+                    android:hint="请输入单位保险金额"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <!--投保险种-->
+            <!--单位保险金额-->
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:layout_gravity="center"
+                    android:text="验标时间:" />
+
+                <TextView
+                    android:id="@+id/tv_baodan_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:hint="请选择验标时间" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/form_style.layout">
+
+                <TextView
+                    style="@style/form_style.text"
+                    android:text="地址:" />
+
+                <EditText
+                    android:id="@+id/tv_baodan_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入地址"
+                    android:maxLength="50"
+                    android:maxLines="2"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_toubaoImageAcquisition"
+                style="@style/form_style.button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="图像采集"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

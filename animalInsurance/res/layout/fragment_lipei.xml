@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_lipei"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/lipei_title"
+        layout="@layout/activity_title" />
+
+    <Button
+        android:id="@+id/btn_lipei_add"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="申请理赔"
+        android:textColor="#fff"
+        android:background="@drawable/button_onclick"
+        android:layout_below="@id/lipei_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <EditText
+        android:id="@+id/search_lipei_input_edit"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_tag_search"
+        android:layout_margin="8dp"
+        android:hint="请输入保单号"
+        android:drawableLeft="@mipmap/ic_search"
+        android:drawablePadding="3dp"
+        android:padding="8dp"
+        android:maxLength="20"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:layout_below="@id/btn_lipei_add"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mylipei_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
