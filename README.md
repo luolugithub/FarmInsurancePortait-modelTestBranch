@@ -1,6 +1,14 @@
-# 农险APP     竖屏版
+# Animal insurance model test APP     
 
+personal test
 
+pig
+cow
+donkey
+tensorflow Lite model test
 
-牛险、驴险和猪险的融合
-竖屏版
+box detect
+rotation predict
+key points prediction
+
+image  or video supported 
